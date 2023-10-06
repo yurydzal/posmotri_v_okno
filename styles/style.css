@@ -81,7 +81,7 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  max-width: 711px;
+  width: 711px;
 }
 
 .result__video-container {
@@ -98,6 +98,9 @@ ol {
 /* search-form */
 
 .search-form {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
   width: 100%;
   display: flex;
   gap: 40px;
@@ -111,9 +114,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: inherit;
 }
 
 .search-form__label {
@@ -122,14 +123,15 @@ ol {
 
 .search-form__textfield {
   appearance: none;
-  font-size: 18px;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
+  font-size: inherit;
   color: rgba(255, 255, 255, 0.70);
   background-color: transparent;
   border: 1px solid #FFF;
   border-left: 0;
   border-right: 0;
   min-width: 225px;
+  min-height: 27px;
 }
 
 .search-form__textfield:focus {
@@ -168,7 +170,7 @@ ol {
   text-decoration: underline;
 }
 
-.search-form__pseudo-checkbox:active { /* переделать */
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
   width: 18px;
   height: 18px;
   background: white;
@@ -186,6 +188,7 @@ ol {
   background-color: transparent;
   border: 1px solid #FFF;
   cursor: pointer;
+  height: 34px;
 }
 
 .button:hover {
@@ -197,8 +200,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #FFF;
-  outline-offset: 1px;
+  border: 3px double white;
 }
 
 .button:active {
@@ -208,14 +210,12 @@ ol {
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
   margin-top: auto;
   margin-left: auto;
 }
 
 .more-button {
   width: 399px;
-  height: 35px;
 }
 
 /* section: content__details */
@@ -224,15 +224,16 @@ ol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
-  max-width: 399px;
+  gap: 26px;
+  width: 399px;
+  height: 534px;
 }
 
 .title {
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  line-height: 94%;
+  line-height: 93%;
   text-transform: uppercase;
 }
 
@@ -259,6 +260,7 @@ ol {
   display: block;
   color: #FFF;
   text-decoration: none;
+  padding: 2px 0;
   margin: 2px;
 }
 
@@ -293,7 +295,7 @@ ol {
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
-margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
